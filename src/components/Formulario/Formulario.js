@@ -46,7 +46,7 @@ const Formulario = () => {
 
         ((pessoa.imc == 0) ?
 
-        <View>
+        <View style={style.container}>
 
             <View>
                 <Text style={style.texto}>Nome</Text>
@@ -56,6 +56,7 @@ const Formulario = () => {
                     placeholder="Nome"
                     value={pessoa.nome}
                     onChangeText={(e) => {setPessoa({...pessoa, nome: e})}}
+                    style={style.texto}
                 />
             </View>
 
@@ -68,6 +69,7 @@ const Formulario = () => {
                     value={pessoa.altura}
                     onChangeText={(e) => {setPessoa({...pessoa, altura: e})}}
                     keyboardType="decimal-pad"
+                    style={style.texto}
                 />
             </View>
 
@@ -80,6 +82,7 @@ const Formulario = () => {
                     value={pessoa.peso}
                     onChangeText={(e) => {setPessoa({...pessoa, peso: e})}}
                     keyboardType="decimal-pad"
+                    style={style.texto}
                 />
             </View>
             
@@ -107,12 +110,19 @@ const Formulario = () => {
 }
 
 const style = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'space-between',
+        alignContent: 'flex-start'
+    },
     texto: {
         color: '#000000',
-        fontSize: 18
+        fontSize: 22,
+        fontWeight: 'bold'
     },
     input: {
-        borderColor: '#000000'
+        borderWidth: 2,
+        padding: 15,
     },
     resposta: {
         textAlign: 'center',

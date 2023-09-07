@@ -11,11 +11,11 @@ const Botao = ({titulo, click}) => {
 
 const style = StyleSheet.create({
     botao: {
-        backgroundColor: '#3c9e79',
-        borderRadius: 5,
-        padding: 15,
+        backgroundColor: '#2a32a0',
+        borderRadius: 10,
+        padding: 20,
         justifyContent: 'center',
-        margin: 10
+        marginTop: 10
     },
     texto: {
         textAlign: 'center',
